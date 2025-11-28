@@ -1,0 +1,28 @@
+{
+  "name": "tp",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python -m flask --app apps/web/api/index run -p 5328"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "turbo": "^2.5.8",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.6.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "prisma": "^6.17.1"
+  }
+}

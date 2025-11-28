@@ -1,0 +1,35 @@
+{
+  "extends": "@repo/typescript-config/nextjs.json",
+
+  "compilerOptions": {
+    "baseUrl": ".",
+
+    "paths": {
+      "@lib/*": ["./app/lib/*"]
+    },
+
+    // TypeScript behavior
+    "strict": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+
+    // Next.js TS plugin
+    "plugins": [
+      { "name": "next" }
+    ]
+  },
+
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    "next-env.d.ts",
+    "next.config.js",
+    ".next/types/**/*.ts"
+  ],
+
+  "exclude": ["node_modules"]
+}
+
