@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@repo/ui"],
+  transpilePackages: ["@repo/ui", "@repo/db"],
 
-  // REQUIRED for Prisma in a Turborepo on Vercel
   experimental: {
     serverComponentsExternalPackages: ["@repo/db"],
   },
 
-  // Your Flask rewrites preserved
   rewrites: async () => {
     return [
       {
