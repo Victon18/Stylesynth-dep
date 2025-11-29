@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@repo/ui", "@repo/db"],
+  transpilePackages: ["@repo/ui"],
 
   experimental: {
     serverComponentsExternalPackages: ["@repo/db"],
