@@ -7,7 +7,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
-    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python -m flask --app apps/web/api/index run -p 5328"
+    "flask-dev": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python -m flask --app apps/web/flask/index run -p 5328"
   },
   "devDependencies": {
     "prettier": "^3.6.2",
